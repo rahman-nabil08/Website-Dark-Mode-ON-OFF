@@ -1,0 +1,97 @@
+:root{
+    --Body-color: white;
+    --text-color: black;
+    --shadow-box: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ol,ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background: var(--Body-color);
+}
+
+nav{
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    box-shadow: var(--shadow-box);
+    padding: 20px 0;
+}
+
+.darkMode nav{
+    box-shadow:  rgba(196, 189, 189, 0.35) 0px 7px 29px 0px;;
+}
+
+body.darkMode{
+    /* background: #010736; */
+    /* background: #092328; */
+    background: #000;
+    transition: 0.35s;
+}
+
+.navLogo .white-logo{
+    display: none;
+}
+
+.darkMode .navLogo .red-logo{
+    display: none;
+}
+.darkMode .navLogo .white-logo{
+    display: block;
+}
+
+nav .navMenu ul li{
+    display: inline-block;
+    margin: 0 10px; 
+}
+
+nav .navMenu ul li a{
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.darkMode nav .navMenu ul li a{
+    color: white;
+}
+
+nav .changeModeBtn button{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: transparent;
+    border: none;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+
+nav .changeModeBtn button span{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+nav .changeModeBtn button span.moonIcon{
+    background-color: black;
+    color: yellow;
+}
+
+.darkMode nav .changeModeBtn button span.moonIcon{
+    margin-top: -100%;
+    transition: 0.35s;
+}
+
+nav .changeModeBtn button span.sunIcon{
+    background: whitesmoke;
+    color: red;
+}
